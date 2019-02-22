@@ -30,6 +30,10 @@ h3 {
 
   &__brand {
     width: 120px;
+
+    @include big {
+      width: 150px;
+    }
   }
   &__cta {
     border: 0;
@@ -39,15 +43,24 @@ h3 {
     color: $color1;
     padding: 4px 20px;
     border-radius: 2px;
+
+    @include big {
+      padding: 8px 40px;
+    }
   }
 }
 
 // masthead
 .masthead {
   width: 80%;
+  max-width: 650px;
   margin: 0 auto;
   text-align: center;
   margin-top: 40px;
+
+  @include big {
+    margin-top: 80px;
+  }
 
   &__img {
     width: 100%;

@@ -2,3 +2,10 @@
 $color1: hsl(322, 100%, 66%);
 $color2: hsl(265, 100%, 66%);
 $ntrl-blue: hsl(214, 64%, 98%);
+
+// mixins
+@mixin big {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
