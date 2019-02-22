@@ -1,0 +1,55 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-size: 18px;
+  background: $ntrl-blue;
+  font-family: "Open Sans", "sans-serif";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", "Open Sans", "sans-serif";
+}
+
+// header
+.header {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+
+  &__brand {
+    width: 120px;
+  }
+  &__cta {
+    border: 0;
+    font-size: 12px;
+    background: white;
+    box-shadow: 0 3px 17px -5px rgba(0, 0, 0, 0.1);
+    color: $color1;
+    padding: 4px 20px;
+    border-radius: 2px;
+  }
+}
+
+// masthead
+.masthead {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+
+  &__img {
+    width: 100%;
+  }
+}
