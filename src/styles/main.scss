@@ -13,11 +13,12 @@ body {
   font-family: "Open Sans", "sans-serif";
   color: $ntrl-dark-cyan;
   line-height: 1.5;
+  overflow-x: hidden;
   // ! remove it
   margin-bottom: 240px;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -29,6 +30,7 @@ h3 {
 
 // header
 .header {
+  max-width: 1050px;
   padding: 25px 0;
   display: flex;
   justify-content: space-between;
@@ -46,11 +48,12 @@ h3 {
   &__cta {
     border: 0;
     font-size: 12px;
+    font-weight: 600;
     background: white;
     box-shadow: 0 3px 17px -5px rgba(0, 0, 0, 0.1);
     color: $color1;
     padding: 5px 20px;
-    border-radius: 2px;
+    border-radius: 4px;
 
     @include big {
       padding: 8px 40px;
@@ -81,7 +84,7 @@ h3 {
 
   &__content {
     &-title {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 25px;
     }
     &-description {
@@ -96,6 +99,56 @@ h3 {
       border-radius: 4px;
       color: white;
       box-shadow: 0 2px 18px -3px $color1;
+    }
+  }
+}
+
+// features
+.users {
+  max-width: 1050px;
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: 180px auto;
+  align-items: center;
+
+  @media (min-width: 800px) {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 60px;
+    max-width: 450px;
+
+    @media (min-width: 800px) {
+      margin-bottom: 0;
+      flex: 1;
+    }
+  }
+
+  .features {
+    text-align: center;
+    max-width: 420px;
+
+    @media (min-width: 800px) {
+      text-align: left;
+      margin-left: 60px;
+    }
+
+    &__col {
+      margin-top: 40px;
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &__description {
+      font-size: 15px;
+      color: $ntrl-gray-blue;
+      line-height: 1.7;
     }
   }
 }

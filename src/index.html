@@ -18,16 +18,18 @@
     <link rel="stylesheet" href="./styles/main.scss" />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Open+Sans:400,700"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Open+Sans:400,600,700"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="header">
+    <!-- the nav at the top with logo and and a button -->
+    <nav class="header">
       <img class="header__brand" src="./images/logo.svg" alt="huddle" />
       <button class="header__cta">Try It Free</button>
-    </header>
+    </nav>
 
+    <!-- intro of the site below the nav -->
     <article class="masthead">
       <img
         class="masthead__img"
@@ -49,5 +51,43 @@
         </button>
       </section>
     </article>
+
+    <!-- features -->
+    <section class="users">
+      <img
+        class="users__img"
+        src="./images/illustration-your-users.svg"
+        alt="users"
+      />
+
+      <section class="features">
+        <article class="features__col">
+          <h2 class="features__title">Flowing Conversations</h2>
+          <p class="features__description">
+            You wouldn't paginate a conversation in real life, so why do it
+            online? Our threads have just-in-time loading for a more natural
+            flow.
+          </p>
+        </article>
+
+        <article class="features__col">
+          <h2 class="features__title">Grow Together</h2>
+          <p class="features__description">
+            Generate meaningful discussions with your audience and build a
+            strong, loyal community. Think of the insightful conversations you
+            miss out on with a feedback form.
+          </p>
+        </article>
+
+        <article class="features__col">
+          <h2 class="features__title">Your Users</h2>
+          <p class="features__description">
+            It takes no time at all to integrate Huddle with your app's
+            authentication solution. This means, once signed in to your app,
+            your users can start chatting immediately.
+          </p>
+        </article>
+      </section>
+    </section>
   </body>
 </html>
