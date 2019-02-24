@@ -11,3 +11,13 @@ $ntrl-dark-cyan: hsl(192, 100%, 9%);
     @content;
   }
 }
+
+// components
+@mixin btn {
+  padding: 10px 35px;
+  background: $color1;
+  border: 0;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 0 2px 18px -3px $color1;
+}
