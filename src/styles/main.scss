@@ -31,6 +31,21 @@ h3 {
   font-family: "Poppins", "Open Sans", "sans-serif";
 }
 
+.colorful-bg {
+  width: 200%;
+  height: 100vh;
+  background: linear-gradient(to right, #e252d2, #fe6fac);
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-30deg) translate(40%);
+  border-radius: 90px;
+  top: -90px;
+
+  @media only screen and (min-width: 800px) {
+    transform: rotate(-30deg) translate(35%);
+  }
+}
+
 // header
 .header {
   max-width: 1200px;
