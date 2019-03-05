@@ -8,18 +8,21 @@
 }
 
 body {
-  font-size: 18px;
   background: $ntrl-blue;
   font-family: "Open Sans", "sans-serif";
   color: $ntrl-dark-cyan;
   line-height: 1.5;
   overflow-x: hidden;
-  // ! remove it
-  margin-bottom: 240px;
+  font-size: 18px;
 }
 
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1,
@@ -28,17 +31,9 @@ h3 {
   font-family: "Poppins", "Open Sans", "sans-serif";
 }
 
-h1 {
-  font-size: 26px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
 // header
 .header {
-  max-width: 1050px;
+  max-width: 1200px;
   padding: 25px 0;
   display: flex;
   justify-content: space-between;
@@ -46,11 +41,15 @@ h2 {
   margin: 0 auto;
   align-items: center;
 
+  @media only screen and (min-width: 800px) {
+    margin: 20px auto;
+  }
+
   &__brand {
     width: 120px;
 
-    @include big {
-      width: 150px;
+    @media only screen and (min-width: 800px) {
+      width: 170px;
     }
   }
   &__cta {
@@ -64,7 +63,9 @@ h2 {
     border-radius: 4px;
 
     @include big {
-      padding: 8px 40px;
+      padding: 10px 40px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
     }
   }
 }
@@ -72,20 +73,21 @@ h2 {
 // masthead
 .masthead {
   width: 80%;
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 200px;
 
-  @include big {
-    margin-top: 60px;
+  @media only screen and (min-width: 800px) {
+    margin-top: 100px;
   }
 
   &__img {
     width: 100%;
     margin-bottom: 20px;
 
-    @include big {
+    @media only screen and (min-width: 800px) {
       margin-bottom: 50px;
     }
   }
@@ -93,6 +95,7 @@ h2 {
   &__content {
     &-title {
       margin-bottom: 25px;
+      font-size: 26px;
     }
     &-description {
       color: $ntrl-gray-blue;
@@ -102,16 +105,25 @@ h2 {
     &-cta {
       @include btn;
     }
+
+    @media only screen and (min-width: 800px) {
+      &-title {
+        font-size: 30px;
+      }
+      &-description {
+        font-size: 18px;
+      }
+    }
   }
 }
 
 // features
 .users {
-  max-width: 1050px;
+  max-width: 1200px;
   display: flex;
   flex-flow: column;
   width: 90%;
-  margin: 180px auto;
+  margin: 0 auto;
   align-items: center;
 
   @media (min-width: 800px) {
@@ -146,9 +158,12 @@ h2 {
     &__title {
       font-size: 20px;
       margin-bottom: 10px;
+      @media only screen and (min-width: 800px) {
+        font-size: 22px;
+      }
     }
     &__description {
-      font-size: 15px;
+      font-size: 16px;
       color: $ntrl-gray-blue;
       line-height: 1.7;
     }
@@ -157,7 +172,7 @@ h2 {
 
 // trial card
 .trial {
-  margin: 100px auto;
+  margin: 200px auto;
   width: 90%;
   max-width: 600px;
   padding: 50px 20px;
@@ -193,5 +208,147 @@ h2 {
 
     box-shadow: none;
     border-radius: 0;
+  }
+}
+
+// top level footer element
+.footer {
+  background: $ntrl-dark-cyan;
+  color: $ntrl-blue;
+
+  .container {
+    width: 86%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+
+    @media only screen and (min-width: 800px) {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__logo {
+    margin: 60px auto;
+    width: 160px;
+    display: block;
+
+    @media (min-width: 800px) {
+      margin: 60px 0 25px 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-flow: column wrap;
+
+    @media (min-width: 800px) {
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__links {
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    margin-top: -10px;
+
+    a {
+      padding: 10px 0;
+    }
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// newsletter input / form
+.newsletter {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: 800px) {
+    margin: 0;
+    max-width: 380px;
+    text-align: left;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__description {
+    font-size: 14px;
+  }
+
+  &__input {
+    padding: 14px;
+    border: 0;
+    border-radius: 2px;
+  }
+
+  &__submit {
+    @include btn;
+    box-shadow: none;
+    padding: 14px 30px;
+
+    @media (min-width: 800px) {
+      align-self: flex-end;
+    }
+  }
+}
+
+// the legal section : the social icons and the trademark
+.footer__legal {
+  text-align: center;
+
+  @media only screen and (min-width: 800px) {
+    text-align: left;
+    order: -1;
+  }
+}
+
+.footer__social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+
+  @media (min-width: 800px) {
+    justify-content: initial;
+  }
+
+  .fab {
+    font-size: 26px;
+    margin-right: 20px;
+
+    @media (min-width: 800px) {
+      font-size: 33px;
+    }
+  }
+}
+
+.footer__copywrite {
+  font-size: 12px;
+
+  @media (min-width: 800px) {
+    font-size: 14px;
   }
 }
