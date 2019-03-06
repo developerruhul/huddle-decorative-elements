@@ -31,20 +31,37 @@ h3 {
   font-family: "Poppins", "Open Sans", "sans-serif";
 }
 
-.colorful-bg {
-  width: 200%;
-  height: 100vh;
-  background: linear-gradient(to right, #e252d2, #fe6fac);
+/* #header-background */
+.header-bg {
   position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
   z-index: -1;
-  transform: rotate(-30deg) translate(40%);
-  border-radius: 90px;
-  top: -90px;
 
-  @media only screen and (min-width: 800px) {
-    transform: rotate(-30deg) translate(35%);
+  &__colorful {
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to right, #e252d2, #fe6fac);
+    position: relative;
+    z-index: -1;
+    transform: rotate(-35deg) translate(70%);
+    border-radius: 90px;
+
+    @media only screen and (min-width: 500px) {
+      transform: rotate(-35deg) translate(60%, -3%);
+    }
+
+    @media only screen and (min-width: 1000px) {
+      transform: rotate(-35deg) translate(43%, -15%);
+    }
+  }
+
+  &__white {
   }
 }
+
+/* #endheader-background */
 
 // header
 .header {
